@@ -8,6 +8,12 @@ class MainClass {
 
     string decis ="s";
     int dia,mes,ano;
+    
+    dataAtual = new Data(31,12,3454);
+    Console.WriteLine($"Data Criada >>{dataAtual.MostraData()}");
+
+    dataAtual.aumentaData(1);
+    Console.WriteLine($"Data Criada >>{dataAtual.MostraData()}");
 
     while(decis == "s"){
       try{
@@ -35,6 +41,7 @@ class MainClass {
     }
 
     //Teste Para Aumentar Datas
+
     /* dataAtual = new Data(2,4,3454);
     Console.WriteLine($"Data Criada >>{dataAtual.MostraData()}");
 

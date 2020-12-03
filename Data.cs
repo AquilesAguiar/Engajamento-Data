@@ -15,7 +15,6 @@ class Data{
     mes = m;
     ano = a;  
   }  
-  
 
   public Data(){
     dia = int.Parse(DateTime.Now.Day.ToString());
@@ -27,12 +26,18 @@ class Data{
     return $"{dia}/{mes}/{ano}";
   }
 
-  public int aumentaData(int num){
+  public void aumentaData(int num){
+    if (mes == 12){
+        mes = 0;
+        mes+=1;
+        ano+=1;
+    }
     if (dia == 31){
       dia = 0;
-      return dia+=num;
+      dia+=num;
     }
-    return dia+=num;
+    else
+    dia+=num;
     
   }
 
